@@ -1,0 +1,7 @@
+# You can create a new personal access token for github with the help of this
+# guide:
+# https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
+
+GITHUB_TOKEN=
+GITHUB_ORG=
+BACKUP_DIR=/var/backups/github/

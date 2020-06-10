@@ -1,0 +1,24 @@
+[Unit]
+Description=githubbackup backups a github organization
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/default/githubbackup
+User=githubbackup
+Group=githubbackup
+ExecStart=/usr/lib/githubbackup/backup.sh
+LimitNOFILE=65000
+LockPersonality=true
+NoNewPrivileges=true
+MemoryDenyWriteExecute=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectHome=true
+RemoveIPC=true
+RestrictSUIDSGID=true
+ProtectControlGroups=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+
+SyslogIdentifier=githubbackup

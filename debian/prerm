@@ -16,6 +16,7 @@ set -e
 
 case "$1" in
     remove)
+        systemctl disable --now prometheus-sshwifi.timer
     ;;
     upgrade|deconfigure)
     ;;

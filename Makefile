@@ -40,6 +40,9 @@ $(DEB_PACKAGE_DIR)/: \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/list_repos.sh \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/clone.sh \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/ok.sh \
+	$(DEB_PACKAGE_DIR)/etc/default/$(NAME) \
+	$(DEB_PACKAGE_DIR)/usr/lib/systemd/system/$(NAME).service \
+	$(DEB_PACKAGE_DIR)/usr/lib/systemd/system/$(NAME).timer \
 
 	@touch "$@"
 
@@ -59,6 +62,14 @@ $(DEB_PACKAGE_DIR)/DEBIAN/%: debian/%
 	@mkdir -p "$(dir $@)"
 	cp -p "debian/$*" "$@"
 
+$(DEB_PACKAGE_DIR)/etc/default/$(NAME): sys/defaults
+	mkdir -p "$(dir $@)"
+	cp $< $@
+
 $(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/%: %
+	mkdir -p "$(dir $@)"
+	cp $< $@
+
+$(DEB_PACKAGE_DIR)/usr/lib/systemd/system/%: sys/%
 	mkdir -p "$(dir $@)"
 	cp $< $@

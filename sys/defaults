@@ -1,8 +1,16 @@
-# You can create a new personal access token for github with the help of this
-# guide:
-# https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
-
-GITHUB_TOKEN=
-GITHUB_ORG=
-GITHUB_USER=
 BACKUP_DIR=/var/backups/github/
+GITHUB_ORG=
+
+# There are two ways of authenticating this application, either with an
+# ordinary personal access token or as a GitHub App.
+
+# Personal access token
+
+# GITHUB_TOKEN=
+# GITHUB_USER=
+
+# GitHub App
+#
+# GITHUB_INSTALLATION_ID=
+# GITHUB_APP_ID=
+# GITHUB_APP_KEY=

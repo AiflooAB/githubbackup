@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -euo pipefail
+set -eo pipefail
 
 if [ -z "$GITHUB_TOKEN" ] && [ -z "$GITHUB_APP_KEY" ]; then
     echo >&2 "Need either GITHUB_TOKEN or GITHUB_APP_KEY";

@@ -47,7 +47,7 @@ $(DEB_PACKAGE_DIR)/: \
 	@touch "$@"
 
 $(DEB_PACKAGE_DIR)/DEBIAN/: \
-	$(DEB_PACKAGE_DIR)/DEBIAN/conffile \
+	$(DEB_PACKAGE_DIR)/DEBIAN/conffiles \
 	$(DEB_PACKAGE_DIR)/DEBIAN/control \
 	$(DEB_PACKAGE_DIR)/DEBIAN/postinst \
 	$(DEB_PACKAGE_DIR)/DEBIAN/postrm \

@@ -21,4 +21,4 @@ TODAY=$(date -I)
 export DEST=$BACKUP_DIR/$TODAY
 mkdir -p "$DEST"
 
-./list_repos.sh | sort --random-sort | head | parallel ./clone.sh
+./list_repos.sh | parallel ./clone.sh

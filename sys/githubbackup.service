@@ -20,6 +20,6 @@ RestrictSUIDSGID=true
 ProtectControlGroups=true
 ProtectKernelModules=true
 ProtectKernelTunables=true
-ProtectSystem=strict
+ProtectSystem=full
 
 SyslogIdentifier=githubbackup

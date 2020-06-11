@@ -40,6 +40,8 @@ $(DEB_PACKAGE_DIR)/: \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/list_repos.sh \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/clone.sh \
 	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/ok.sh \
+	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/jwt.sh \
+	$(DEB_PACKAGE_DIR)/usr/lib/$(NAME)/token.sh \
 	$(DEB_PACKAGE_DIR)/etc/default/$(NAME) \
 	$(DEB_PACKAGE_DIR)/usr/lib/systemd/system/$(NAME).service \
 	$(DEB_PACKAGE_DIR)/usr/lib/systemd/system/$(NAME).timer \

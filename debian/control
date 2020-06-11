@@ -1,5 +1,5 @@
 Package: githubbackup
 Architecture: amd64
-Maintainer: linus <linus@noomi.com>
+Maintainer: linus <linus@nectarinehealth.com>
 Depends: parallel, git, curl, bash, sed
 Description: Small utility to back up all github repositories in an organization

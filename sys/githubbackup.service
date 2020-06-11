@@ -4,6 +4,7 @@ Description=githubbackup backups a github organization
 [Service]
 Type=oneshot
 EnvironmentFile=/etc/default/githubbackup
+WorkingDirectory=/usr/lib/githubbackup/
 User=githubbackup
 Group=githubbackup
 ExecStart=/usr/lib/githubbackup/backup.sh

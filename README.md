@@ -18,9 +18,9 @@ guide:
 
 https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 
-```
-GITHUB_TOKEN=
+```bash
 GITHUB_USER=
+GITHUB_TOKEN=
 ```
 
 ### GitHub App
@@ -32,10 +32,17 @@ user.
 1. Create a new github application either under your personal settings or your
    organisations settings. The menu item you want is "GitHub Apps".
 2. Create a new GitHub App by pressing the "New GitHub App" button.
-3. Once you have done that you need to generate a private key. This is done at
+3. Set the App ID as `GITHUB_APP_ID`.
+4. Once you have done that you need to generate a private key. This is done at
    the bottom of the General settings page under the GitHub App. Let
    `GITHUB_APP_KEY` point to that file.
-4. Authorize the GitHub App in the "Install App" settings page under your GitHub App.
-5. Extract the GitHub app installation id. This can be found by pressing the
+5. Authorize the GitHub App in the "Install App" settings page under your GitHub App.
+6. Extract the GitHub app installation id. This can be found by pressing the
    gear icon next to what you just installed. Set that ID as
    `GITHUB_INSTALLATION_ID`
+
+```bash
+GITHUB_APP_ID=
+GITHUB_APP_KEY=
+GITHUB_INSTALLATION_ID=
+```

@@ -10,8 +10,14 @@ DEB_PACKAGE_DIR=$(OUT_DIR)/deb/$(NAME)-$(VERSION)
 ok.sh_version=0.6.1
 ok.sh_url=https://raw.githubusercontent.com/whiteinge/ok.sh/$(ok.sh_version)/ok.sh
 
-ok.sh:
-	wget $(ok.sh_url)
+ok.sh: $(OUT_DIR)/ok.sh-$(ok.sh_version)
+	cp --link --force $< $@
+
+$(OUT_DIR)/ok.sh-$(ok.sh_version): | $(OUT_DIR)/
+	wget $(ok.sh_url) --output-document "$@"
+
+$(OUT_DIR)/:
+	mkdir -p $(OUT_DIR)
 
 .PHONY: all
 all: $(DEB_PACKAGE_DIR).deb

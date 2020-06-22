@@ -18,6 +18,7 @@ ok.sh: $(OUT_DIR)/ok.sh-$(ok.sh_version)
 
 $(OUT_DIR)/ok.sh-$(ok.sh_version): | $(OUT_DIR)/
 	wget $(ok.sh_url) --output-document "$@"
+	chmod +x "$@"
 
 $(OUT_DIR)/:
 	mkdir -p $(OUT_DIR)

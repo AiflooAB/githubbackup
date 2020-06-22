@@ -10,6 +10,9 @@ DEB_PACKAGE_DIR=$(OUT_DIR)/deb/$(NAME)-$(VERSION)
 ok.sh_version=0.6.1
 ok.sh_url=https://raw.githubusercontent.com/whiteinge/ok.sh/$(ok.sh_version)/ok.sh
 
+.PHONY: all
+all: $(DEB_PACKAGE_DIR).deb
+
 ok.sh: $(OUT_DIR)/ok.sh-$(ok.sh_version)
 	cp --link --force $< $@
 
@@ -18,9 +21,6 @@ $(OUT_DIR)/ok.sh-$(ok.sh_version): | $(OUT_DIR)/
 
 $(OUT_DIR)/:
 	mkdir -p $(OUT_DIR)
-
-.PHONY: all
-all: $(DEB_PACKAGE_DIR).deb
 
 .PHONY: release
 release: clean \

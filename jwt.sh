@@ -10,7 +10,7 @@ payload=$(
 	jq --null-input \
         --compact-output \
         --arg time_str "$(date +%s)" \
-        --arg exp_str "$(date --date="now + 10 minutes" +%s)" \
+        --arg exp_str "$(date --date="now + 9 minutes" +%s)" \
         --arg iss "$GITHUB_APP_ID" \
 	'{
         "iat": ($time_str | tonumber),

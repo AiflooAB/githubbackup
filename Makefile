@@ -7,7 +7,7 @@ SHORT_VERSION=$(patsubst v%,%,$(VERSION))
 OUT_DIR=build
 DEB_PACKAGE_DIR=$(OUT_DIR)/deb/$(NAME)-$(VERSION)
 
-ok.sh_version=0.6.1
+ok.sh_version=b0d162819f11ad9135d8185ec6460a342fffdd7b
 ok.sh_url=https://raw.githubusercontent.com/whiteinge/ok.sh/$(ok.sh_version)/ok.sh
 
 .PHONY: all
